@@ -1,0 +1,15 @@
+
+AddHandler application/x-httpd-eig-php54 .php .php5 .phtml
+AddHandler application/x-httpd-ea-php54___lsphp .php .php5 .phtml
+
+### regra de redirecionamento https ###
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://sacolabiodegradavel.com.br/$1 [R,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Defina o pacote “ea-php74” como a linguagem padrão de programação “PHP”.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
